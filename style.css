@@ -1,0 +1,145 @@
+body, html{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+body {
+    overflow: visible;
+}
+#bird {
+    position: fixed;
+    left: -200px;
+    top: 10%;
+    width: 100px;
+    height: 100px;
+}
+#logo {
+    animation: logoAnimation 1.5s;
+    color:#01334394;
+    transition: all 1s;
+    /* font-size: 5vw; */
+}
+
+#bg-img {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    z-index: -1;
+}
+#leadText {
+    /* font-size: 1.2vw; */
+    font-size: 25px;
+    display: none;
+}
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.addBgColor {
+    transition: all 1s;
+    background-color:#01334394;
+    color: white;
+}
+.splitter {
+    width: 150%;
+    margin-left: -25%;
+    background-color: white;
+    height: 2px;
+    margin-bottom: 10px;
+    display: none;
+    border-radius: 50%;
+}
+#seeMore {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 3rem;
+    outline: none;
+}
+#seeMore:hover {
+    transform: translateY(10px);
+    transition: all 0.3s;
+    outline: none;
+    border: none;
+}
+#plane {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: -1;
+    max-width: 35%;
+}
+
+.f-more-container-1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    color: white;
+    margin-top: 200px;
+}
+
+.f-more-left-1 {
+    width: 40%;
+    height: 100%;
+    margin-top: 100px;
+}
+.right-mask {
+    height: 100%;
+    width: 60%;
+    margin-left: auto;
+    filter: drop-shadow(0px 0px 14px rgba(0,0,0,0.59));
+    -webkit-filter: drop-shadow(0px 0px 14px rgba(0,0,0,0.29));
+    -moz-filter: drop-shadow(0px 0px 14px rgba(0,0,0,0.59));
+}
+.f-more-right-1 {
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    width: 100%;
+    background-color: white;
+}
+.more-text {
+    padding-left: 50px;
+    color:white;
+    opacity:0;
+    transition: all 1s;
+}
+
+@media (max-width: 700px) {
+    #leadText {
+        font-size: 20px;
+    }
+    #logo {
+        font-size: 70px;
+    }
+    .splitter {
+        width: 75%;
+        margin-left: 12.5%;
+    }
+} 
+@media (max-width: 1100px) {
+    .f-more-container-1 {
+        flex-direction: column;
+        height: 100%;
+    }
+    .f-more-left-1 {
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+    .more-text {
+        padding-right: 50px;
+    }
+    .right-mask {
+        width: 100%;
+    }
+}
